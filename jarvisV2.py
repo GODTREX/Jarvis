@@ -51,6 +51,11 @@ def execute_command(command):
         query = command.replace("search for", "").strip()
         play_audio("Command acknowledged.mp3")
         webbrowser.open(f"https://www.google.com/search?q={query}")
+    elif "open chat GPT" in command:
+        play_audio("Command acknowledged.mp3")
+        webbrowser.open("chatgpt.com")
+    elif "hello" in command:
+        play_audio("hello sir.mp3")
     elif "exit" in command or "bye" in command:
         play_audio("good bye.mp3")
         return True
